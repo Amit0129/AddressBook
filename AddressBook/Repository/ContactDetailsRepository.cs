@@ -115,12 +115,5 @@ namespace AddressBook.Repository
             contactDetails.Add(personDetail.PhoneNumber, personDetail);
 
         }
-        public void RemoveContactDateils(string firstname)
-        {
-            var personDetail = GetFirstName(firstname);
-            contactDetails.Remove(personDetail.PhoneNumber);
-            
 
-        }
-    }
 }

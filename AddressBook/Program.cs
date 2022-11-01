@@ -118,9 +118,7 @@ namespace AddressBook
                     contactDetails.EditContactEmail(name, emaill);
                     break;
             }
-            Console.WriteLine("Enter persons First Naame if you want remove the contact details");
-            string rName = Console.ReadLine();
-            contactDetails.RemoveContactDateils(rName);
+            
 
 
         }
