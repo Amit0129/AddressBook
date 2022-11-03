@@ -29,7 +29,7 @@ namespace AddressBook.Repository
         }*/
         public void DisplayContact()
         {
-            foreach(var item in contactDetails)
+            foreach (var item in contactDetails)
             {
                 Console.WriteLine($"Contact details of :: {item.Value.FirstName}");
                 Console.WriteLine($"Contact details of :: {item.Value.LastName}");
@@ -44,14 +44,14 @@ namespace AddressBook.Repository
         {
             foreach (var item in contactDetails)
             {
-                if(item.Value.FirstName.Contains(firstname))
+                if (item.Value.FirstName.Contains(firstname))
                 {
                     return item.Value;
                 }
             }
             return null;
         }
-        public void EditContactFirstName(string firstname,string firstN)
+        public void EditContactFirstName(string firstname, string firstN)
         {
             var personDetail = GetFirstName(firstname);
             contactDetails.Remove(personDetail.PhoneNumber);
@@ -116,4 +116,11 @@ namespace AddressBook.Repository
 
         }
 
+        public void RemoveContactDateils(string firstname)
+        {
+            var personDetail = GetFirstName(firstname);
+            contactDetails.Remove(personDetail.PhoneNumber);
+
+        }
+    }
 }
